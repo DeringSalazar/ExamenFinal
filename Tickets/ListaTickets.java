@@ -4,7 +4,6 @@
  */
 package Tickets;
 
-import TipoEnum.Tipo;
 import java.util.ArrayList;
 
 public class ListaTickets {
@@ -29,9 +28,9 @@ public class ListaTickets {
     public Ticket buscarTicket(Ticket Tickets){
          for (int i = 0; i < listaTickets.size(); i++){
             if (this.listaTickets.get(i).getTipo()== null) {
-                Tickets = i;
+                Tickets = listaTickets.get(i);
             }
          }
-        return null;  
+        return Tickets;  
     }
 }
