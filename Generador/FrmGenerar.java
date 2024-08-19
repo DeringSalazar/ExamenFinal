@@ -17,7 +17,7 @@ public class FrmGenerar extends javax.swing.JInternalFrame {
      * Creates new form NewJInternalFrame
      */
     public FrmGenerar() {
-        ticket = null;
+        tickets = null;
         initComponents();
     }
 
