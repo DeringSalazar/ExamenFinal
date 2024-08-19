@@ -12,11 +12,12 @@ import Tickets.Ticket;
  * @author Student
  */
 public class FrmGenerar extends javax.swing.JInternalFrame {
-    private ListaTickets ticket;
+    private ListaTickets tickets;
     /**
      * Creates new form NewJInternalFrame
      */
     public FrmGenerar() {
+        ticket = null;
         initComponents();
     }
 
@@ -110,9 +111,12 @@ public class FrmGenerar extends javax.swing.JInternalFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-//        String numero = (int) Integer.parseInt(TxtNumero.getText());
+        int numero = Integer.parseInt(TxtNumero.getText());
         String tipo = (String) CbTipo.getSelectedItem();
-//        Ticket ticket = new Ticket(numero, tipo);
+        Ticket ticket = new Ticket();
+        tickets.agregarTicket(ticket);
+        TxtNumero.setText("");
+        CbTipo.setSelectedItem("Elegir");
     }//GEN-LAST:event_jButton1ActionPerformed
 
 
